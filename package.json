@@ -1,0 +1,27 @@
+{
+  "name": "microseconds",
+  "version": "0.0.1",
+  "description": "microsecond parser for node and browsers",
+  "main": "index.js",
+  "browser": {
+    "microtime": false
+  },
+  "author": "Valerio Proietti <kamicane@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "microtime": "^0.6.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamicane/microseconds.git"
+  },
+  "keywords": [
+    "microseconds",
+    "microtime"
+  ],
+  "bugs": {
+    "url": "https://github.com/kamicane/microseconds/issues"
+  },
+  "homepage": "https://github.com/kamicane/microseconds"
+}
