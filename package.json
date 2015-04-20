@@ -1,6 +1,6 @@
 {
   "name": "microseconds",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "microsecond parser for node and browsers",
   "main": "index.js",
   "browser": {},
