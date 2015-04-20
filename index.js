@@ -1,10 +1,12 @@
 'use strict';
 
-import now from './now';
-import parse from './parse';
+var now = require("./now"),
+    parse = require("./parse");
 
-var since = (time) => {
-  return now() - time;
+var since = function(nano) {
+  return now() - nano;
 };
 
-export { now, parse, since };
+exports.now = now;
+exports.since = since;
+exports.parse = parse;

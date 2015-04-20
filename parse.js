@@ -2,7 +2,12 @@
 
 var toString = function() {
 
-  var { microseconds, milliseconds, seconds, minutes, hours, days } = this;
+  var microseconds = this.microseconds,
+      milliseconds = this.milliseconds,
+      seconds = this.seconds,
+      minutes = this.minutes,
+      hours = this.hours,
+      days = this.days;
 
   var parts = [{
     name: 'day',
@@ -50,9 +55,9 @@ var toString = function() {
   return time.join(' ');
 };
 
-var parse = (time) => {
+module.exports = function parse(nano) {
 
-  var ms = time / 1000;
+  var ms = nano / 1000;
   var ss = ms / 1000;
   var mm = ss / 60;
   var hh = mm / 60;
@@ -65,7 +70,5 @@ var parse = (time) => {
   var hours = Math.floor(hh % 24);
   var days = Math.floor(dd);
 
-  return { microseconds, milliseconds, seconds, minutes, hours, days, toString };
+  return { microseconds: microseconds, milliseconds: milliseconds, seconds: seconds, minutes: minutes, hours: hours, days: days, toString: toString };
 };
-
-export default parse;

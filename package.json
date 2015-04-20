@@ -3,14 +3,10 @@
   "version": "0.0.2",
   "description": "microsecond parser for node and browsers",
   "main": "index.js",
-  "browser": {
-    "microtime": false
-  },
+  "browser": {},
   "author": "Valerio Proietti <kamicane@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "microtime": "^0.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "repository": {
     "type": "git",

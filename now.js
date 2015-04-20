@@ -1,24 +1,30 @@
 /* global performance */
 'use strict';
 
-import { now as microTimeNow } from 'microtime';
+var now;
 
-var now = {};
+if (global.process && process.hrtime) {
+  var hrtime = process.hrtime;
 
-if (microTimeNow) {
-
-  now = () => microTimeNow();
+  now = function () {
+    var hr = hrtime();
+    return (hr[0] * 1e9 + hr[1]) / 1e3;
+  };
 
 } else if (global.performance && performance.now) {
 
   var start = (performance.timing && performance.timing.navigationStart) || Date.now();
 
-  now = () => (start + performance.now()) * 1e3;
+  now = function() {
+    return (start + performance.now()) * 1e3;
+  };
 
 } else {
 
-  now = () => Date.now() * 1e3;
+  now = function() {
+    return Date.now() * 1e3;
+  };
 
 }
 
-export default now;
+module.exports = now;

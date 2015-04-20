@@ -2,9 +2,7 @@
 
 A small focused library to generate and parse microseconds, for node and browsers.
 
-To get the current timestamp, it uses the [microtime](https://github.com/wadey/node-microtime) package in node.js, [performance.now](https://developer.mozilla.org/en-US/docs/Web/API/Performance.now()) in browsers. Falls back to `Date.now() * 1000`.
-
-Written in es6 syntax, transpiled with [harmonizer](https://github.com/kamicane/harmonizer).
+To get the current timestamp, it uses [hrtime](https://nodejs.org/api/process.html#process_process_hrtime) in node.js, [performance.now](https://developer.mozilla.org/en-US/docs/Web/API/Performance.now()) in browsers. Falls back to `Date.now() * 1000`.
 
 Best browserified with [quickstart](https://github.com/spotify/quickstart).
 
