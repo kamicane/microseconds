@@ -3,7 +3,7 @@
 const now = require('./now')
 const parse = require('./parse')
 
-const since = (nano) => now() - nano
+const since = (micro) => now() - micro
 
 exports.now = now
 exports.since = since

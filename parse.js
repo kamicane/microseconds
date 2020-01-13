@@ -61,8 +61,8 @@ function toString () {
   return time.join(' ')
 }
 
-module.exports = (nano) => {
-  const ms = nano / 1000
+module.exports = (micro) => {
+  const ms = micro / 1000
   const ss = ms / 1000
   const mm = ss / 60
   const hh = mm / 60
